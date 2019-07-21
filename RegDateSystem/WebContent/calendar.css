@@ -1,0 +1,128 @@
+.title_year {
+	font-size: 150%;
+}
+
+.nav_btn {
+	border: 0;
+	text-align: center;
+	font-size: 150%;
+	color: white;
+	background-color: transparent;
+}
+
+.nav_btn:hover {
+	color: grey;
+}
+
+.nav_btn:active {
+	
+}
+
+#calendar_table {
+	width: 100%;
+	height: auto;
+	cellpadding: 30px;
+	cellspacing: 0;
+}
+
+.month_year_header {
+	
+}
+
+.week_header_row {
+	
+}
+
+.week_data_row {
+	height: 70px;
+}
+
+.week_data_row td {
+	font-style: bold;
+}
+
+.week_header_row td {
+	width: 14%;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	font-style: bold;
+	font-size: 120%;
+}
+
+.day_cell, .empty_day_cell, .today_cell {
+	text-align: center;
+	vertical-align: middle;
+	font-style: bold;
+}
+
+.day_cell:hover {
+	background-color: #474747;
+}
+
+.day_cell:active {
+	background-color: #353535;
+}
+
+.today_cell:hover {
+	border: 1px solid white;
+}
+
+.today_cell:active {
+	background: white;
+}
+
+.today_cell {
+	background: #fcd127;
+	color: white;
+	font-style: bold;
+}
+
+#clk {
+	font-size: 250%;
+	font-weight: bold;
+}
+
+.main_div {
+	border:0;
+	margin: 0;
+	width:100%;
+	height:100%;
+	display: inline-block;
+	background: #222222;
+}
+
+.header {
+	color: white;
+}
+
+.calendar_main_div {
+	display: inline-block;
+	float: left;
+	width: 55%;
+	height: 100%;
+	color: white;
+	background-color: transparent;
+}
+
+.daily_main_div {
+	display: inline-block;
+	float: right;
+	width: 45%;
+	height: 100%;
+	color: white;
+	float: right;
+}
+
+.iFrame_div {
+	display: inline-block;
+	width: 100%;
+	height: 600px;
+}
+
+#popUp_iF {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	margin: 0;
+}
