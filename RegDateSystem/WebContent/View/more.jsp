@@ -8,35 +8,46 @@
 <title>Insert title here</title>
 <style>
 table {
-	width: 80%;
+	width: 100%;
 	height: auto;
 	border: 3px solid white;
 	text-align: center;
 	color: white;
+	font-size: 120%;
 }
 
 td {
 	border: 1px solid white;
-	height:auto;
 }
 
-tr > td:first-of-type{
-	width:20%;
+tr>td:first-of-type {
+	width: 30%;
 }
 
-tr > td:nth-of-type(2){
-	width:80%;
+tr>td:nth-of-type(2) {
+	width: 70%;
 }
-
 
 #title {
 	background-color: white;
 }
 
+textarea{
+	width: 99%;
+}
+.more_btn {
+	width:30%;
+	border: 0;
+	outline: 0;
+	margin:5px;
+	font-size: 120%;
+	color: white;
+	background-color: transparent;
+}
 
-textarea {
-	width: 100%;
-	height: 300px;
+.more_btn:hover {
+	cursor: pointer;
+	color: black;
 }
 </style>
 </head>
@@ -69,14 +80,14 @@ textarea {
 				</tr>
 				<tr>
 					<td colspan="2">보충시간</td>
-					<td>${vo.getUpload_start_time() } ~ ${vo.getUpload_end_time() }</td>
+					<td>${vo.getUpload_start_time() }~${vo.getUpload_end_time() }</td>
 				</tr>
-				
+
 				<tr>
 					<td colspan="3">내용</td>
 				</tr>
 				<tr>
-					<td colspan="4" style="height:100px;">${vo.getUpload_comment() }</td>
+					<td colspan="4" style="height: 300px;">${vo.getUpload_comment() }</td>
 				</tr>
 
 				<tr>
@@ -84,19 +95,19 @@ textarea {
 					<td colspan="2">${vo.getUpload_writer() }</td>
 				</tr>
 
-
 				<tr>
-					<td colspan="4" align="center"><input type="submit"
-						value="예약 수정"
+					<td colspan="3">&nbsp;&nbsp; <input class="more_btn" type="submit" value="예약 수정"
 						onclick="location.href='<%=request.getContextPath()%>/editPass.do'">
-						<input type="button" value="예약 삭제"
-						onclick="location.href='<%=request.getContextPath()%>/cancel.do?no=${vo.getUpload_no() }'">
-						<input type="button" value="목록"
-						onClick="location.href='<%=request.getContextPath()%>/listCont.do?year=${vo.getRyear() }&month=${vo.getRmonth() }&day=${vo.getRday() }'">
 
+						<input class="more_btn" type="button" value="목록"
+						onClick="location.href='<%=request.getContextPath()%>/listCont.do?year=${vo.getRyear() }&month=${vo.getRmonth() }&day=${vo.getRday() }'">
+						<input class="more_btn" type="button" value="예약 삭제"
+						onclick="location.href='<%=request.getContextPath()%>/cancel.do?no=${vo.getUpload_no() }'">
 					</td>
 				</tr>
+
 			</tbody>
+
 		</table>
 
 	</form>

@@ -19,6 +19,7 @@ table {
 	border: 3px solid white;
 	text-align: center;
 	color: white;
+	font-size: 120%;
 }
 
 td {
@@ -29,14 +30,26 @@ td {
 	background-color: white;
 }
 
-input {
-	width: 100%;
+textarea, select, input {
+	width: 99%;
+	font-size: 120%;
 }
 
-textarea {
-	width: 100%;
-	height: 300px;
+.edit_btn {
+	width:40%;
+	border: 0;
+	outline: 0;
+	margin:5px;
+	font-size: 120%;
+	color: white;
+	background-color: transparent;
 }
+
+.edit_btn:hover {
+	cursor: pointer;
+	color: black;
+}
+
 </style>
 
 
@@ -61,17 +74,17 @@ textarea {
 			</thead>
 			<tbody>
 				<tr>
-					<th>학생이름</th>
+					<td>학생이름</td>
 					<td colspan="2"><input name="upload_name"
 						value="${vo.getUpload_name() }" type="text" /></td>
 				</tr>
 				<tr>
-					<th>수강과목</th>
+					<td>수강과목</td>
 					<td colspan="2"><input name="upload_class"
 						value="${vo.getUpload_class() }" type="text" /></td>
 				</tr>
 				<tr>
-					<th>전화번호</th>
+					<td>전화번호</td>
 					<td colspan="2"><input name="upload_tel"
 						value="${vo.getUpload_tel() }" type="text" /></td>
 				</tr>
@@ -81,7 +94,6 @@ textarea {
 				<tr>
 					<td><select name="upload_start_time">
 							<option value="">Start</option>
-							<!-- value : pass to server -->
 							<option value="11:00">11:00</option>
 							<option value="11:30">11:30</option>
 							<option value="12:00">12:00</option>
@@ -123,36 +135,33 @@ textarea {
 					</select></td>
 				</tr>
 				<tr>
-					<th colspan="3">내용</th>
+					<td colspan="3">내용</td>
 				</tr>
 				<tr>
-					<td colspan="3"><textarea name="upload_comment" class="text_H">${vo.getUpload_comment() }</textarea></td>
+					<td colspan="3"><textarea name="upload_comment"
+							style="height: 300px">${vo.getUpload_comment() }</textarea></td>
 				</tr>
 				<tr>
-					<th>담당멘토</th>
+					<td>담당멘토</td>
 					<td colspan="2"><input name="upload_writer"
 						value="${vo.getUpload_writer() }" type="text" /></td>
 				</tr>
 
 				<tr>
-					<th>비밀번호</th>
+					<td>비밀번호</td>
 					<td colspan="2"><input name="upload_pwd"
 						value="${vo.getUpload_pwd() }" type="password" /></td>
 
 				</tr>
 
 				<tr>
-					<td colspan="3" align="center"><input type="submit" value="수정">
-						&nbsp;&nbsp;&nbsp; <input type="button" value="취소"
-						onClick="history.go(-2)"></td>
+					<td colspan="3" align="center">&nbsp;&nbsp; <input
+						class="edit_btn" type="submit" value="수정"> &nbsp;&nbsp; <input
+						class="edit_btn" type="button" value="취소" onClick="history.go(-2)"></td>
 				</tr>
 			</tbody>
 		</table>
 	</form>
-	<script type="text/javascript">
-		$('.submit').on('click', function() {
-			window.close();
-		})
-	</script>
+
 </body>
 </html>

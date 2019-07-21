@@ -11,14 +11,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>write</title>
 <style>
-
-
 table {
-	width:100%;
-	height:auto;
+	width: 100%;
+	height: auto;
 	border: 3px solid white;
-	text-align:center;
-	color:white;
+	text-align: center;
+	color: white;
+	font-size: 120%;
 }
 
 td {
@@ -29,14 +28,25 @@ td {
 	background-color: white;
 }
 
-input{
-	width:100%;
-}
-textarea{
-width:100%;
-height:300px;
+input, select, textarea {
+	width: 99%;
+	font-size: 120%;
 }
 
+.write_btn {
+	width:40%;
+	border: 0;
+	outline: 0;
+	margin:5px;
+	font-size: 120%;
+	color: white;
+	background-color: transparent;
+}
+
+.write_btn:hover {
+	cursor: pointer;
+	color: black;
+}
 </style>
 
 </head>
@@ -51,7 +61,7 @@ height:300px;
 			<thead>
 
 				<tr>
-					<th colspan="5">${MONTH }월${DAY }일 예약</th>
+					<th colspan="5">${MONTH }월${DAY }일예약</th>
 				</tr>
 			</thead>
 
@@ -74,7 +84,6 @@ height:300px;
 				<tr>
 					<td><select name="upload_start_time">
 							<option value="">Start</option>
-							<!-- value : pass to server -->
 							<option value="11:00">11:00</option>
 							<option value="11:30">11:30</option>
 							<option value="12:00">12:00</option>
@@ -119,7 +128,8 @@ height:300px;
 					<td colspan="3">내용</td>
 				</tr>
 				<tr>
-					<td colspan="3"><textarea name="upload_comment"></textarea></td>
+					<td colspan="3"><textarea name="upload_comment"
+							style="height: 300px"></textarea></td>
 				</tr>
 				<tr>
 					<td>담당멘토</td>
@@ -128,23 +138,19 @@ height:300px;
 
 				<tr>
 					<td>비밀번호</td>
-					<td colspan=""><input name="upload_pwd" type="password" /></td>
+					<td colspan="2"><input name="upload_pwd" type="password" /></td>
 
 				</tr>
-
 				<tr>
-					<td colspan="3" align="center"><input type="submit"
-						value="예약추가"> &nbsp;&nbsp;&nbsp; <input type="reset"
-						value="다시작성"> &nbsp;&nbsp;&nbsp; <input type="button"
-						value="취소" onClick="history.back()"></td>
+
+					<td colspan="3" align="center">&nbsp;&nbsp; <input
+						class="write_btn" type="submit" value="예약추가">&nbsp;&nbsp;<input
+						class="write_btn" type="button" value="취소"
+						onClick="history.back()"></td>
 				</tr>
 			</tbody>
 		</table>
 	</form>
-	<script type="text/javascript">
-		$('.submit').on('click', function() {
-			window.close();
-		})
-	</script>
+
 </body>
 </html>
