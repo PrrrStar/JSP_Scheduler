@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -36,10 +37,14 @@ textarea{
 	width: 99%;
 }
 .more_btn {
-	width:30%;
+	width:auto;
 	border: 0;
 	outline: 0;
-	margin:5px;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:10px;
+	margin-right:10px;
+	
 	font-size: 120%;
 	color: white;
 	background-color: transparent;
@@ -66,42 +71,42 @@ textarea{
 		<table>
 			<thead>
 				<tr>
-					<th colspan="4">${vo.getRmonth() }¿ù${vo.getRday() }ÀÏ¿¹¾à</th>
+					<th colspan="4">${vo.getRmonth() }ì›”${vo.getRday() }ì¼ì˜ˆì•½</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>ÇĞ»ıÀÌ¸§</td>
+					<td>í•™ìƒì´ë¦„</td>
 					<td colspan="2">${vo.getUpload_name() }</td>
 				</tr>
 				<tr>
-					<td>¼ö°­°ú¸ñ</td>
+					<td>ìˆ˜ê°•ê³¼ëª©</td>
 					<td colspan="2">${vo.getUpload_class() }</td>
 				</tr>
 				<tr>
-					<td colspan="2">º¸Ãæ½Ã°£</td>
+					<td colspan="2">ë³´ì¶©ì‹œê°„</td>
 					<td>${vo.getUpload_start_time() }~${vo.getUpload_end_time() }</td>
 				</tr>
 
 				<tr>
-					<td colspan="3">³»¿ë</td>
+					<td colspan="3">ë‚´ìš©</td>
 				</tr>
 				<tr>
 					<td colspan="4" style="height: 300px;">${vo.getUpload_comment() }</td>
 				</tr>
 
 				<tr>
-					<td>´ã´ç¸àÅä</td>
+					<td>ë‹´ë‹¹ë©˜í† </td>
 					<td colspan="2">${vo.getUpload_writer() }</td>
 				</tr>
 
 				<tr>
-					<td colspan="3">&nbsp;&nbsp; <input class="more_btn" type="submit" value="¿¹¾à ¼öÁ¤"
+					<td colspan="3">&nbsp;&nbsp; <input class="more_btn" type="submit" value="ì˜ˆì•½ ìˆ˜ì •"
 						onclick="location.href='<%=request.getContextPath()%>/editPass.do'">
 
-						<input class="more_btn" type="button" value="¸ñ·Ï"
+						<input class="more_btn" type="button" value="ëª©ë¡"
 						onClick="location.href='<%=request.getContextPath()%>/listCont.do?year=${vo.getRyear() }&month=${vo.getRmonth() }&day=${vo.getRday() }'">
-						<input class="more_btn" type="button" value="¿¹¾à »èÁ¦"
+						<input class="more_btn" type="button" value="ì˜ˆì•½ ì‚­ì œ"
 						onclick="location.href='<%=request.getContextPath()%>/cancel.do?no=${vo.getUpload_no() }'">
 					</td>
 				</tr>

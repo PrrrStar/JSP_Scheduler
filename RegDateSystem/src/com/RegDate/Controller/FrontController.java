@@ -56,8 +56,6 @@ public class FrontController extends HttpServlet {
 		}
 	
 		else if (command.equals("cal.do")) {
-	//		action = new CalReservation();
-		//	action.execute(request, response);
 			viewPage = "calendar.jsp";
 
 

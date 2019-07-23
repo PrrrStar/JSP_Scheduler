@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="java.util.*"%>
-<%
-	request.setCharacterEncoding("EUC-KR");
-%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -63,16 +63,16 @@
 		<table class="listCont_table">
 			<thead>
 				<tr>
-					<td colspan="3">${MONTH }¿ù${DAY }ÀÏ¿¹¾à</td>
+					<td colspan="3">${MONTH }ì›”${DAY }ì¼ì˜ˆì•½</td>
 
 				</tr>
 			</thead>
 
 
 			<tr class="list_head_tr">
-				<td width="25%">ÀÌ¸§</td>
-				<td width="40%">½Ã°£</td>
-				<td width="35%">°ú¸ñ</td>
+				<td width="25%">ì´ë¦„</td>
+				<td width="40%">ì‹œê°„</td>
+				<td width="35%">ê³¼ëª©</td>
 
 			</tr>
 
@@ -85,14 +85,14 @@
 					onclick="location.href='<%=request.getContextPath() %>/more.do?no=${i.getUpload_no() }'">
 
 					<td>${i.getUpload_name() }</td>
-					<td>${i.getUpload_start_time() }~ ${i.getUpload_end_time() }</td>
+					<td>${i.getUpload_start_time() } ~ ${i.getUpload_end_time() }</td>
 					<td>${i.getUpload_class() }</td>
 
 				</tr>
 			</c:forEach>
 
 		</table>
-		<input type="button" class="add_btn" value="¿¹¾àÃß°¡"
+		<input type="button" class="add_btn" value="ì˜ˆì•½ì¶”ê°€"
 			onclick="location.href='<%=request.getContextPath() %>/write.do?year=${YEAR }&month=${MONTH }&day=${DAY }'" />
 
 	</form>

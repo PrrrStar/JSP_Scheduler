@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <%@page import="java.util.*"%>
 <%
 	request.setCharacterEncoding("EUC-KR");
@@ -67,29 +68,29 @@ textarea, select, input {
 		<table>
 			<thead>
 				<tr>
-					<th colspan="5">${vo.getRyear() }³â${vo.getRmonth() }¿ù
-						${vo.getRday() }ÀÏ ¿¹¾à</th>
+					<th colspan="5">${vo.getRyear() }ë…„${vo.getRmonth() }ì›”
+						${vo.getRday() }ì¼ ì˜ˆì•½</th>
 				</tr>
 
 			</thead>
 			<tbody>
 				<tr>
-					<td>ÇĞ»ıÀÌ¸§</td>
+					<td>í•™ìƒì´ë¦„</td>
 					<td colspan="2"><input name="upload_name"
 						value="${vo.getUpload_name() }" type="text" /></td>
 				</tr>
 				<tr>
-					<td>¼ö°­°ú¸ñ</td>
+					<td>ìˆ˜ê°•ê³¼ëª©</td>
 					<td colspan="2"><input name="upload_class"
 						value="${vo.getUpload_class() }" type="text" /></td>
 				</tr>
 				<tr>
-					<td>ÀüÈ­¹øÈ£</td>
+					<td>ì „í™”ë²ˆí˜¸</td>
 					<td colspan="2"><input name="upload_tel"
 						value="${vo.getUpload_tel() }" type="text" /></td>
 				</tr>
 				<tr>
-					<th rowspan="2">º¸Ãæ½Ã°£</th>
+					<th rowspan="2">ë³´ì¶©ì‹œê°„</th>
 				</tr>
 				<tr>
 					<td><select name="upload_start_time">
@@ -135,20 +136,20 @@ textarea, select, input {
 					</select></td>
 				</tr>
 				<tr>
-					<td colspan="3">³»¿ë</td>
+					<td colspan="3">ë‚´ìš©</td>
 				</tr>
 				<tr>
 					<td colspan="3"><textarea name="upload_comment"
 							style="height: 300px">${vo.getUpload_comment() }</textarea></td>
 				</tr>
 				<tr>
-					<td>´ã´ç¸àÅä</td>
+					<td>ë‹´ë‹¹ë©˜í† </td>
 					<td colspan="2"><input name="upload_writer"
 						value="${vo.getUpload_writer() }" type="text" /></td>
 				</tr>
 
 				<tr>
-					<td>ºñ¹Ğ¹øÈ£</td>
+					<td>ë¹„ë°€ë²ˆí˜¸</td>
 					<td colspan="2"><input name="upload_pwd"
 						value="${vo.getUpload_pwd() }" type="password" /></td>
 
@@ -156,8 +157,8 @@ textarea, select, input {
 
 				<tr>
 					<td colspan="3" align="center">&nbsp;&nbsp; <input
-						class="edit_btn" type="submit" value="¼öÁ¤"> &nbsp;&nbsp; <input
-						class="edit_btn" type="button" value="Ãë¼Ò" onClick="history.go(-2)"></td>
+						class="edit_btn" type="submit" value="ìˆ˜ì •"> &nbsp;&nbsp; <input
+						class="edit_btn" type="button" value="ì·¨ì†Œ" onClick="history.go(-2)"></td>
 				</tr>
 			</tbody>
 		</table>

@@ -72,16 +72,6 @@ public class UploadDAO {
 			return result;
 	}
 
-	/*------------------예약 정보------------------*/
-	/*
-	 * public int calInfo(UploadVO vo) { try {
-	 * 
-	 * String sql =
-	 * "select upload_name, upload_start_time, upload_end_time from RSV_System";
-	 * pstmt = conn.prepareStatement(sql); rs = pstmt.executeQuery();
-	 * while(rs.next()) { vo.set } } }
-	 */
-
 	public List<UploadVO> selectList(int year, int month, int day) {
 		List<UploadVO> list = new ArrayList<UploadVO>();
 

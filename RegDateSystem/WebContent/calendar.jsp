@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <%@ page import="com.RegDate.Model.UploadVO"%>
 <%@ page import="com.RegDate.Model.UploadDAO"%>
 <%@ page
@@ -18,15 +19,15 @@
 
 <link rel="StyleSheet" href="calendar.css" type="text/css"
 	media="screen" />
-<script type="text/javascript" src="clk.js"></script>
+<script type="text/javascript" src="clock.js"></script>
 <script type="text/javascript" src="cal.js"></script>
 
-<body style="background:#222222;">
+<body onLoad="today_focus();" style="background:#222222;">
 	<div class="main_div">
 		<div class="header">
-			<div id="clk">
+			<div id="clock" style="font-size:250%; font-weight:bold;">
 				<script>
-				clk();
+				clock();
 			</script>
 
 			</div>
@@ -44,7 +45,7 @@
 							<input type="hidden" name="year" value="<%=prevYear%>">
 						</form>
 
-						<font class="title_year"> <%=intYear%>³â <%=monthName%>¿ù
+						<font class="title_year"> <%=intYear%>ë…„ <%=monthName%>ì›”
 						</font>
 						<form method="post">
 							<input type="submit" class="nav_btn" name="NEXT" value=" >> ">

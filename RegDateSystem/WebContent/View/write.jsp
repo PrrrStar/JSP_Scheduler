@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="java.util.*"%>
 <%
@@ -61,25 +62,25 @@ input, select, textarea {
 			<thead>
 
 				<tr>
-					<th colspan="5">${MONTH }¿ù${DAY }ÀÏ¿¹¾à</th>
+					<th colspan="5">${MONTH }ì›”${DAY }ì¼ì˜ˆì•½</th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
-					<td>ÇÐ»ýÀÌ¸§</td>
+					<td>í•™ìƒì´ë¦„</td>
 					<td colspan="2"><input name="upload_name" type="text" /></td>
 				</tr>
 				<tr>
-					<td>¼ö°­°ú¸ñ</td>
+					<td>ìˆ˜ê°•ê³¼ëª©</td>
 					<td colspan="2"><input name="upload_class" type="text" /></td>
 				</tr>
 				<tr>
-					<td>ÀüÈ­¹øÈ£</td>
+					<td>ì „í™”ë²ˆí˜¸</td>
 					<td colspan="2"><input name="upload_tel" type="text" /></td>
 				</tr>
 				<tr>
-					<td rowspan="2">º¸Ãæ½Ã°£</td>
+					<td rowspan="2">ë³´ì¶©ì‹œê°„</td>
 				</tr>
 				<tr>
 					<td><select name="upload_start_time">
@@ -125,27 +126,27 @@ input, select, textarea {
 					</select></td>
 				</tr>
 				<tr>
-					<td colspan="3">³»¿ë</td>
+					<td colspan="3">ë‚´ìš©</td>
 				</tr>
 				<tr>
 					<td colspan="3"><textarea name="upload_comment"
 							style="height: 300px"></textarea></td>
 				</tr>
 				<tr>
-					<td>´ã´ç¸àÅä</td>
+					<td>ë‹´ë‹¹ë©˜í† </td>
 					<td colspan="2"><input name="upload_writer" type="text" /></td>
 				</tr>
 
 				<tr>
-					<td>ºñ¹Ð¹øÈ£</td>
+					<td>ë¹„ë°€ë²ˆí˜¸</td>
 					<td colspan="2"><input name="upload_pwd" type="password" /></td>
 
 				</tr>
 				<tr>
 
 					<td colspan="3" align="center">&nbsp;&nbsp; <input
-						class="write_btn" type="submit" value="¿¹¾àÃß°¡">&nbsp;&nbsp;<input
-						class="write_btn" type="button" value="Ãë¼Ò"
+						class="write_btn" type="submit" value="ì˜ˆì•½ì¶”ê°€">&nbsp;&nbsp;<input
+						class="write_btn" type="button" value="ì·¨ì†Œ"
 						onClick="history.back()"></td>
 				</tr>
 			</tbody>

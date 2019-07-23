@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page
 	import="com.RegDate.Action.Month, java.util.*,java.text.*,java.io.*,java.sql.*,com.RegDate.*"
 	errorPage="error.jsp"%>
